@@ -23,3 +23,39 @@ export function fetchPositiveData() {
     }, 2000);
   });
 }
+
+export function fetchTeamData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const n = Math.random();
+      if (n < 0.75) {
+        resolve([
+          {
+            id: 1,
+            name: "Collin",
+          },
+          {
+            id: 2,
+            name: "Helen",
+          },
+          {
+            id: 3,
+            name: "Gary",
+          },
+          {
+            id: 4,
+            name: "Vova",
+          },
+          {
+            id: 5,
+            name: "Eugene",
+          },
+          {
+            id: 6,
+            name: "Michael",
+          },
+        ]);
+      } else reject("Error");
+    }, 2000);
+  });
+}

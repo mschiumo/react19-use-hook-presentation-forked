@@ -17,7 +17,7 @@ const DataComponent = ({ positiveDataPromise }) => {
   const positiveData = use(positiveDataPromise);
   return (
     <div>
-      <h1>Benefits of Using use Hook in React 19</h1>
+      <h1>Benefits of Utilizing use in React 19</h1>
       {positiveData &&
         positiveData.map((item) => (
           <li className="text-wrap" key={item.id}>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import UseHookWithContext from "./components/use/UseHookWithContext";
+import UseHookExample from "./components/use/UseHookExample";
 import UseHookWithPromise from "./components/use/UseHookWithPromise";
 import "./styles.css";
 
@@ -7,8 +7,8 @@ export default function App() {
   const [activeComponent, setActiveComponent] = useState(null);
   const renderComponent = () => {
     switch (activeComponent) {
-      case "UseHookWithContext":
-        return <UseHookWithContext />;
+      case "UseHookExample":
+        return <UseHookExample />;
       case "UseHookWithPromise":
         return <UseHookWithPromise />;
       default:
@@ -20,10 +20,10 @@ export default function App() {
     <div>
       <div className="nav-btns">
         <button
-          className={activeComponent === "UseHookWithContext" ? "active" : ""}
-          onClick={() => setActiveComponent("UseHookWithContext")}
+          className={activeComponent === "UseHookExample" ? "active" : ""}
+          onClick={() => setActiveComponent("UseHookExample")}
         >
-          use API with Context
+          Use Example
         </button>
         <button
           className={activeComponent === "UseHookWithPromise" ? "active" : ""}
